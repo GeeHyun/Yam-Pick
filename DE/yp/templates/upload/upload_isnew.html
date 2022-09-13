@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align: center;">
+        <h5 style="padding-bottom: 10px;">Yam-Pick 데이터 베이스에 존재하지 않는 음식입니다.</h5>
+        
+        <p>
+            <form action="{{ url_for('main.main') }}">
+                <input type="submit" name = "food_name" value = "이동">
+            </form>
+        </p>
+    </div>
+</body>
+{% endblock %}
+</html>

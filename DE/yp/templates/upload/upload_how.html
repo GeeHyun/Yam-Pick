@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align:center;">
+        <div style="padding-bottom: 20px;">
+            <img src = {{url_for("static", filename = photo)}}>
+        </div>
+        <h5 style="padding-bottom: 10px;">음식을 어느 정도 드셨나요?</h5>
+        <form action="{{ url_for('upload.result') }}" method = "post" style="padding-bottom: 10px; margin: 0 auto;">
+            <p style="padding-bottom: 10px;">20% : <input type="submit" value = 0.2 name = "ratio"></p>
+            <p style="padding-bottom: 10px;">40% : <input type="submit" value = 0.4 name = "ratio"></p>
+            <p style="padding-bottom: 10px;">60% : <input type="submit" value = 0.6 name = "ratio"></p>
+            <p style="padding-bottom: 10px;">80% : <input type="submit" value = 0.8 name = "ratio"></p>
+            <p style="padding-bottom: 10px;">100% : <input type="submit" value = 1.0 name = "ratio"></p>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html>

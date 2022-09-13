@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align:center;">
+        <div style="padding-bottom: 10px;">
+            <img src = {{url_for("static", filename = photo)}}>
+        </div>
+        <div style="padding-bottom: 10px; margin: 0 auto;">
+            <form action="{{ url_for('upload.how') }}" method = "post" style="padding-bottom: 10px; margin: 0 auto;">
+                {% for food in food_list %}
+                <input type="submit" value = "{{ food }}" name = "food_name">
+                {% endfor %}
+            </form>
+            <form action="{{ url_for('upload.how') }}" method = "post">
+                <input placeholder="직접 입력하기" name = "food_name">
+                <button type="submit">제출</button>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

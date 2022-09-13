@@ -1,0 +1,18 @@
+{% extends "/admin/admin.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align: center;">
+        <h5 style="padding-bottom: 20px;">추천 음식을 등록해주세요</h5>
+        <p>
+            <form action="{{ url_for('admin.upload') }}" method = "post">
+                <input type="submit" name = "name" value = "업로드" >
+            </form>
+        </p>
+    </div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align: center;">
+        <h5 style="padding-bottom: 10px;">잘못된 접근입니다.</h5>
+        <h5 style="padding-bottom: 10px;">이미지 파일에 문제가 있거나 파일이 첨부되지 않았습니다.</h5>
+        <h5 style="padding-bottom: 20px;">새로운 이미지 파일을 첨부하거나 파일을 첨부하여 제출해 주십시오.</h5>
+        <p>
+            <form action="{{ url_for('upload.upload') }}">
+                <input type="submit" value = "이동">
+            </form>
+        </p>
+    </div>
+</body>
+{% endblock %}
+</html>

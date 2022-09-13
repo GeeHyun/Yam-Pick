@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <p>
+        <form action="{{ url_for('admin.admin') }}" method = "post">
+            <input type="submit" name = "name" value = "업로드" >
+        </form>
+    </p>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align:center;">
+        <p style="padding-bottom: 10px;">
+            <h4 style="padding-bottom: 5px;">탈퇴하시겠습니까?</h4>
+            <h5>탈퇴를 누르시면 모든 정보는 삭제 되오며 추후 데이터 복원은 어렵습니다.</h5>
+        </p>
+        <p>
+            <form action="{{ url_for('auth.signout') }}" method = "post">
+                <input type="submit" name = "name" value = "회원탈퇴" >
+            </form>
+        </p>
+    </div>
+</body>
+{% endblock %}
+</html>

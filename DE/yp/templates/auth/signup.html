@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+
+    <title>{% block title %}{% endblock %} Yam-Pick</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+    </style>
+  
+      
+      <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body class="text-center">
+<main class="form-signin">
+  <div class="container">
+      <h5 class="my-3 border-bottom pb-2">회원가입</h5>
+      <form method="post">
+          {{ form.csrf_token }}
+          {% include "form_errors.html" %}
+          <div class="mb-3">
+              <input type="text" class="form-control" name="email" id="email" 
+                      placeholder="이메일" value="{{ form.email.data or '' }}">
+          </div>
+          <div class="mb-3">
+              <input type="password" class="form-control" name="password1" id="password1"
+                      placeholder="비밀번호" value="{{ form.password1.data or '' }}">
+          </div>
+          <div class="mb-3">
+              <input type="password" class="form-control" name="password2" id="password2"
+                      placeholder="비밀번호 확인" value="{{ form.password2.data or '' }}">
+          </div>
+          <div class="mb-3">
+              <input type="text" class="form-control" name="username" id="username"
+                      placeholder="이름 (3-8자)" value="{{ form.username.data or '' }}">
+          </div>
+          <button type="submit" class="btn btn-primary">회원가입</button>
+      </form>
+  </div>
+<main class="form-signin">
+ </body>
+</html>
+

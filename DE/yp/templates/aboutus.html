@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+    <div style="text-align: center;">
+        <h5 style="padding-bottom: 10px;">우리는! 스무디킹!</h5>
+        <h5 style="padding-bottom: 10px;">팀장 : 이지현</h5>
+        <h5 style="padding-bottom: 10px;">DS : 한현구, 손다영</h5>
+        <h5 style="padding-bottom: 10px;">DA : 심철우, 김재성</h5>
+        <h5 style="padding-bottom: 10px;">DE : 이지현, 박상현</h5>
+        <h5 style="padding-bottom: 20px;">Yam-Pick 프로젝트 고생 많았습니다.</h5>
+        <p>
+            <form action="{{ url_for('main.main') }}">
+                <input type="submit" value = "이동">
+            </form>
+        </p>
+    </div>
+</body>
+{% endblock %}
+</html>

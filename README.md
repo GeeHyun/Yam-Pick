@@ -3,6 +3,7 @@
 
 
 # 얌픽 (YAM-PICK)
+smooth.pythonanywhere.com
 </div>
 <br>
 

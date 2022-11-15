@@ -3,7 +3,8 @@
 
 
 # 얌픽 (YAM-PICK)
-smooth.pythonanywhere.com
+[smooth.pythonanywhere.com](smooth.pythonanywhere.com)
+(deactivated)
 </div>
 <br>
 
